@@ -11,7 +11,7 @@ Topics Implemented:
 - Abstraction -- Setrotation 
 
 Breif Description:
-A simple asteroid shooter game developed using C++ and SFML. The Project was implemented as concept implementation of OOP.
+A simple asteroid shooter game developed using C++ and SFML. The Project was implemented as concept implementation of OOP. 
 
 }}
 
