@@ -1,81 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
-
-  <title>Bootstrap 5 Carousel Slider</title>
+  <title>Extractive Text Summarization</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<style>
-    .c-item {
-  height: 600px;
-}
-.c-img {
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-}
-.carousel-inner{
-    margin-top: 5%;
-    width: 90%;
-}
-
-</style>
 <body>
-  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
-    <div class="carousel-inner">
-      <div class="carousel-item active c-item">
-        <img src="../images/oop.gif" class="d-block w-100 c-img" alt="Slide 1">
-        <div class="carousel-caption top-0 mt-4">
-          <p class="mt-5 fs-3 text-uppercase">Object Oriented Programming</p>
-          <p>Title: Asteriod shooter game</p>
-          <p>Topics Implemented </p>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Title</th>
+        <td>Extractive Text Summarization</td>
+      </tr>
+      <tr>
+        <th>Topics Implemented</th>
+        <td>
           <ul>
-            <li>Inheritance -- Enemy classes, asteroids and bosses</li>
-            <li>Polymorphism -- Different asteroids react different</li>
-            <li>Encapsulation -- Hiding datas</li>
-            <li>Abstraction -- Setrotation</li>
-        </ul>
-        <p>A simple asteroid shooter game developed using C++ and SFML. The Project was implemented as concept implementation of OOP. </p>
-          <button class="btn btn-primary px-4 py-2 fs-5 mt-5">view code</button>
-        </div>
-      </div>
-      <div class="carousel-item c-item">
-        <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img" alt="Slide 2">
-        <div class="carousel-caption top-0 mt-4">
-          <p class="text-uppercase fs-3 mt-5">The season has arrived</p>
-          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-            data-bs-target="#booking-modal">view code</button>
-        </div>
-      </div>
-      <div class="carousel-item c-item">
-        <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img" alt="Slide 3">
-        <div class="carousel-caption top-0 mt-4">
-          <p class="text-uppercase fs-3 mt-5">Destination activities</p>
-          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-            data-bs-target="#booking-modal">View Code</button>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+            <li>Spacy - For text summarization</li>
+            <li>TFIDF - Word importance approach</li>
+            <li>Text Rank - Graph based Approach</li>
+            <li>Cosine similarity - To find similarity between words.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>Implementation of text summarization using TFIDF, Textrank where textrank ranks depending upon matrics while TFIDF calculates the importance of the word in the sentence.</td>
+      </tr>
+    </table>
   </div>
 </body>
 </html>
+<style>
+  table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+ul {
+  margin: 0;
+  list-style-type:disc;
+}
+
+</style>

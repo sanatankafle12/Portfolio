@@ -26,19 +26,20 @@
 <body id="body">
 	<div class="header"  id="Home">
 		<div id="logo">
-			<img src="images/logo.jpg">
+			<img src="images/logo.jpg" height="80vm" width="`80vm">
 		</div>
 		<div>
 		<nav>
-			<ul>
+			<ul id="sidemenu">
 				<li><a href="#Home">Home</a></li>
 				<li><a href="#About">About</a></li>
 				<li><a href="#Projects">Projects</a></li>
 				<li><a href="#Hobbies">Hobbies</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a href="images/resume.pdf" target="_blank">Resume</a>
-				</li>
+				<li><a href="images/resume.pdf" target="_blank">Resume</a></li>
+				<i class="fas fa-times" onclick="closemenu()"></i>
 			</ul>
+			<i class="fas fa-bars" id="'drop" onclick="openmenu()"></i>
 		</nav>
 		</div>
 	</div>
@@ -120,55 +121,151 @@
 		</div>
 	<div class="project" id="Projects">
 		<div> 
-			<h1>My Work</h1>
+			<h1 class="sub-title">My Work</h1>
 			<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
 				  <div class="carousel-item active c-item">
 					<img src="images/oop.gif" class="d-block w-100 c-img" alt="Slide 1">
 					<div class="carousel-caption top-0 mt-4">
-					  <p class="mt-5 fs-3 text-uppercase">Object Oriented Programming</p>
-					  <p>Title: <br>Asteriod shooter game</p>
-					  <p>Topics Implemented </p>
-					  <ul>
-						<li>Inheritance -- Enemy classes, asteroids and bosses</li>
-						<li>Polymorphism -- Different asteroids react different</li>
-						<li>Encapsulation -- Hiding datas</li>
-						<li>Abstraction -- Setrotation</li>
-					  </ul>
-					  <p>A simple asteroid shooter game developed using C++ and SFML. The Project was implemented as concept implementation of OOP. </p>
-					  <button class="btn btn-primary px-4 py-2 fs-5 mt-5">view code</button>
+					  <p class="mt-5 fs-3" >Object Oriented Programming</p>
+					  <table>
+						<tr>
+						  <th>Title</th>
+						  <td>Asteriod shooter game</td>
+						</tr>
+						<tr>
+						  <th>Topics Implemented</th>
+						  <td>
+							<ul>
+							  <li>Inheritance -- Enemy classes, asteroids and bosses</li>
+							  <li>Polymorphism -- Different asteroids react different</li>
+							  <li>Encapsulation -- Hiding datas</li>
+							  <li>Abstraction -- Setrotation</li>
+							</ul>
+						  </td>
+						</tr>
+						<tr>
+						  <th>Description</th>
+						  <td>A simple asteroid shooter game developed using C++ and SFML. The Project was implemented as concept implementation of OOP. </td>
+						</tr>
+					  </table>
+					  <a href="https://github.com/sanatankafle12/OOP_PROJECT" target="_blank"><button class="btn btn-primary">view code</button></a>
 					</div>
 				  </div>
 				  <div class="carousel-item c-item">
 					<img src="images/dsa.gif" class="d-block w-100 c-img" alt="Slide 2">
 					<div class="carousel-caption top-0 mt-4">
-					  <p class="text-uppercase fs-3 mt-5">Data Structure and Algorithms</p>
-					  <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">view code</button>
+						<p class="mt-5 fs-3 text-uppercase">Data Structure and Algorithm</p>
+						<table>
+							<tr>
+							  <th>Title</th>
+							  <td>Knights Tour and Minimum Steps</td>
+							</tr>
+							<tr>
+							  <th>Topics Implemented</th>
+							  <td>
+								<ul>
+								  <li>Stack -- To record knights move.</li>
+								  <li>Queue -- In minimum steps where each solution are stored</li>
+								  <li>BFS -- Minimum steps for knight to traverse from source to destination. </li>
+								  <li>Backtrakking -- Used to go back if game is dead</li>
+								</ul>
+							  </td>
+							</tr>
+							<tr>
+							  <th>Description</th>
+							  <td>Knights tour is a famous chess problem where a knight has to move to all squares without repeating. Backtrackking was used along with a herustic known as Warnsdroff algorithm which sets a rule that knight must move to a square from which it can go to least unvisited squares.</td>
+							</tr>
+						  </table>
+					  <a href="https://github.com/sanatankafle12/DSA_Project" target="_blank" ><button class="btn btn-primary" id="view-code-btn" data-bs-toggle="modal"
+						data-bs-target="#booking-modal">view code</button></a>
 					</div>
 				  </div>
 				  <div class="carousel-item c-item">
 					<img src="images/graphics.gif" class="d-block w-100 c-img" alt="Slide 2">
 					<div class="carousel-caption top-0 mt-4">
-					  <p class="text-uppercase fs-3 mt-5">Graphics</p>
-					  <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">view code</button>
+						<p class="mt-5 fs-3 text-uppercase">Graphics<br> Project</p>
+						<table>
+						<tr>
+							<th>Title</th>
+							<td>Escape Room</td>
+						  </tr>
+						  <tr>
+							<th>Topics Implemented</th>
+							<td>
+							  <ul>
+								<li>Ray Casting - To build closure areas in the space</li>
+								<li>3D transformation - To convert 2D model to 3D</li>
+								<li>Culling - Removing parts not visible</li>
+								<li>Lighting - For shadow effect to the model</li>
+							  </ul>
+							</td>
+						  </tr>
+						  <tr>
+							<th>Description</th>
+							<td>The escape room has been constructed on the basis of ray casting technique and the player has been made by 3D transformation.</td>
+						  </tr>
+						</table>
+					  <a href="https://github.com/sanatankafle12/Escape-Room-Graphics_project" target="_blank"><button class="btn btn-primary" data-bs-toggle="modal"
+						data-bs-target="#booking-modal">view code</button></a>
 					</div>
 				  </div>
 				  <div class="carousel-item c-item">
+					
 					<img src="images/Ai.gif" class="d-block w-100 c-img" alt="Slide 2">
 					<div class="carousel-caption top-0 mt-4">
-					  <p class="text-uppercase fs-3 mt-5">Artificial Intelligence</p>
-					  <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">view code</button>
+						<p class="mt-5 fs-3 text-uppercase">Artificial Intelligence</p>
+						<table>
+							<tr>
+								<th>Title</th>
+								<td>Extractive text summarization in nepali and english</td>
+							  </tr>
+							  <tr>
+								<th>Topics Implemented</th>
+								<td>
+								  <ul>
+									<li>Spacy - For text summarization</li>
+									<li>TFIDF - Word importance approach</li>
+									<li>Text Rank - Graph based Approach</li>
+									<li>Cosine similarity - To find similarity between words.</li>
+								  </ul>
+								</td>
+							  </tr>
+							  <tr>
+								<th>Description</th>
+								<td>Implementation of text summarization using TFIDF, Textrank where textrank ranks depending upon matrics while TFIDF calculates the importance of the word in the sentence.</td>
+							  </tr>
+						</table>
+					  <a href="https://github.com/sanatankafle12/Text_Summarization" target="_blank"><button class="btn btn-primary" data-bs-toggle="modal"
+						data-bs-target="#booking-modal">view code</button></a>
 					</div>
 				  </div>
 				  <div class="carousel-item c-item">
 					<img src="images/mior.gif" class="d-block w-100 c-img" alt="Slide 3">
-					<div class="carousel-caption top-0 mt-4">
-					  <p class="text-uppercase fs-3 mt-5">Minor Project</p>
-					  <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">View Code</button>
+					<div class="carousel-caption top-0 mt-4" >
+						<p class="mt-5 fs-3 text-uppercase">Minor<br> Project</p>
+						<table>
+							<tr>
+							  <th>Title</th>
+							  <td>Predicting price of used mobile phones</td>
+							</tr>
+							<tr>
+							  <th>Topics Implemented</th>
+							  <td>
+								<ul>
+									<li>Linear Regression - For valuating the price of mobile.</li>
+									<li>Classification - For Recommending Mobile phones</li>
+									<li>Web Scraping - To extract data from various sources</li>
+								</ul>
+							  </td>
+							</tr>
+							<tr>
+							  <th>Description</th>
+							  <td>Check how much your phone costs now or get recommendation of new phone you want to buy. </td>
+							</tr>
+						  </table>
+					  <a href="https://github.com/sanatankafle12/minor_project" target="_blank"><button class="btn btn-primary" data-bs-toggle="modal"
+						data-bs-target="#booking-modal">View Code</button></a>
 					</div>
 				  </div>
 				</div>
@@ -378,7 +475,7 @@
 						<span><a href="https://medium.com/@sakafle" target="_blank"><i class="fab fa-medium"></i></a></span>
 						<span><a href="https://github.com/sanatankafle12" target="_blank"><i class="fab fa-github"></i></a></span>
 					</div>
-					<div class="vertical-line" style="float:right"></div>
+					<div class="vertical-line"></div>
 				</div>
 				<div class="contact-right">
 					<form name="submit-to-google-sheet">
@@ -397,6 +494,7 @@
 		&uarr;
 	  </button>
 </body>
+
 
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>

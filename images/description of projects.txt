@@ -42,6 +42,10 @@ Topics Implemented:
 - Culling
 - Flat Shading
 - Clipping
+						  <li>Spacy - For text summarization</li>
+						  <li>TFIDF - Word importance approach</li>
+						  <li>Text Rank - Graph based Approach</li>
+						  <li>Cosine similarity - To find similarity between words.</li>
 
 Brief Description:
 The escape room has been constructed on the basis of ray casting technique and the player has been made by 3D transformation. Flat lighting has been used with directional lighting. 
@@ -75,3 +79,6 @@ Breif Description:
 Check how much your phone costs now or get recommendation of new phone you want to buy. 
 
 }}
+						  <li>Linear Regression - For valuating the price of mobile.</li>
+						  <li>Classification - For Recommending Mobile phones</li>
+						  <li>Web Scraping - To extract data from various sources</li>

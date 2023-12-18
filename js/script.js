@@ -1,5 +1,5 @@
 var swiper = new Swiper(".writing-silde-content", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 25,
     loop: true,
     centerSlide: 'true',
@@ -13,5 +13,10 @@ var swiper = new Swiper(".writing-silde-content", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 3,
+      },
     },
   });
