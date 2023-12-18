@@ -670,6 +670,9 @@ nav a:hover {
 
   @media only screen and (max-width:600px)
   {
+    #hero-carousel .carousel-inner{
+      height:800px;
+    }
     table{
       margin-top: 70px;
     }
@@ -703,7 +706,7 @@ nav a:hover {
       padding: 10px 20px;
     }
     .mt-4{
-      font-size: 8px;
+      font-size: 10px;
     }
     .mt-5{
       font-size: small;
