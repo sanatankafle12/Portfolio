@@ -723,20 +723,23 @@ nav a:hover {
     nav .fas{
       display: block;
       font-size: 25px;
+      margin-left: 40px;
     }
     nav ul{
-      background: #ff004f;
+      background-color: #3c3c3c80;
+      display: block;
       position: fixed;
-      top: 0;
       right: -200px;
-      width: 200px;
-      height: 100vh;
+      width: 150px;
+      margin-top: -40px;
+      height: 1000vh;
       padding-top: 50px;
       z-index: 2;
+      transition: right 0.5s;
     }
     nav ul li{
-      display:block;
-      margin: 25px;
+      font-size: 20px;
+      margin: 20px;
     }
     nav ul .fas{
       position: absolute;
@@ -767,5 +770,8 @@ nav a:hover {
     .section-section-home{
       margin-left: 5%;
       margin-right: 5%;
+    }
+    .hobbies{
+      margin-top: 50px;
     }
   }

@@ -42,7 +42,7 @@
 				<li><a href="images/resume.pdf" target="_blank">Resume</a></li>
 				<i class="fas fa-times" onclick="closemenu()"></i>
 			</ul>
-			<i class="fas fa-bars" id="'drop" onclick="openmenu()"></i>
+			<i class="fas fa-bars" id="drop" onclick="openmenu()"></i>
 		</nav>
 		</div>
 	</div>
@@ -518,6 +518,20 @@
 	})
 		.catch(error => console.error('Error!', error.message))
 	})
+
+  </script>
+
+  <script>
+	var sidemenu = document.getElementById('sidemenu')
+	var drop = document.getElementById('drop');
+	function openmenu(){
+		sidemenu.style.right = '0';
+		drop.classList.remove("fa-bars");
+	}
+	function closemenu(){
+		sidemenu.style.right = '-200px';
+		drop.classList.add("fa-bars");
+	}	
   </script>
 </html>
 
