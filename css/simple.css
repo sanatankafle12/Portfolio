@@ -1,6 +1,6 @@
 #body {
   background-color:rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+
 }
 
 
@@ -26,16 +26,15 @@ nav li{
 
 nav a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: blanchedalmond;
 }
 
 nav a:hover {
   text-decoration: none;
-  color: rgb(253, 104, 104);
-  border-bottom: 1px solid rgb(244, 244, 244);
-  transition:  0.5s ;
+  color: #66fcff;
+  border-bottom: 1px solid blanchedalmond;
+  transition:  1s ease;
 }
-
 .header {
   display: flex;
   align-items: center;
@@ -319,7 +318,6 @@ nav a:hover {
   .work img {
     border-radius: 10px;
     display: block;
-    max-width: 100%;
     height: auto;
     transition: transform 0.5s;
   }
@@ -349,9 +347,9 @@ nav a:hover {
   .c-item {
     height: 530px;
    }
+
   .c-img {
     height: 100%;
-    object-fit: cover;
     filter: brightness(0.6);
     border-radius: 20px;
   }
