@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<title>Sanatan Kafle</title>
 	<meta charset="UTF-8">
 	<meta http-equiv='cache-control' content='no-cache'> 
@@ -50,13 +51,12 @@
 		<div class="container-home">
 			<div class="content-home">
 				<div class="box">
-					Hi!!!<br>
-					<span>I'm Sanatan Kafle</span><br>
-					<span>A Computer Engineer</span>
+					<p id="demo"></p>
 				  </div>
 			</div>
 		</div>
 	</div>
+	
 	<div class="section-section-about" id="About">
 		<div class="container">
 			<div class="row">
@@ -65,13 +65,11 @@
 				</div>
 				<div class="about-col-2">
 					<h1 class="sub-title">About Me</h1>
-					<p> Data science enthusiast with a strong
-						foundation in statistical analysis and
-						machine learning.</p>
+					<p style="font-size: 15px; text-align: justify;">I'm a Computer Engineer who has a deep interest in Data science along with Web development. I enjoy creating websites with aesthetic designs and seamless functionality. Another part of me enjoys looking at data, playing around with them and see how they react to the magic of Models. Machine Learning, AI and LLMs always keep me on the edge.  </p>
 
 					<div class="tab-titles">
 						<p class="tab-links active-link" onclick="opentab('skills')"> SKILLS </p>
-						<p class="tab-links" onclick="opentab('experience')"> EXPERIENCE </p>
+						<p class="tab-links" onclick="opentab('experience')"> EXPERIENCE AND COURSES </p>
 						<p class="tab-links" onclick="opentab('education')"> EDUCATION </p>
 					</div>
 					<div class="tab-contents active-tab" id="skills">
@@ -109,7 +107,9 @@
 					</div>
 					<div class="tab-contents" id="experience">
 						<ul> 
-							<li><span>Computer Assistant [ZX consultancy]</span><br><ul><li> - Desining business cards, Letter head, Logo and more</li><li> - Data Entry and Data analysis</li><li> - Report Writing</li></ul></li>
+							<li><span>Computer Assistant [ZX consultancy]</span><br><ul><li> - Desining business cards, Letter head, Logo and more</li><li> - Data Entry </li><li> - Report Writing</li></ul></li>
+							<li><span>Certificates</span><br><ul><li> - SIC programming & Coding   <span><a href="images/coding.jpg" target="_blank"><i class="fa-regular fa-image" style="font-size: 15px;"></i></a></span></li><li> - SIC Artificial Intelligence Course   <span><a href="images/ai_certificate.jpg" target="_blank"><i class="fa-regular fa-image" style="font-size: 15px;"></i></a></li></ul></li>
+							<li><span>Courses:</span><br><ul><li> - Deep Learning AI short Courses</li><li> - Django For Everybody </li><li>- Machine Learning Specialization by Andrew ng</li></ul></li>
 						</ul>
 					</div>
 					<div class="tab-contents" id="education">
@@ -122,166 +122,131 @@
 				</div>
 			</div>
 		</div>
+
 	<div class="project" id="Projects">
-		<div> 
+
 			<h1 class="sub-title">My Work</h1>
-			<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
 				<div class="carousel-inner">
-				  <div class="carousel-item active c-item">
-					<img src="images/oop.gif" class="d-block w-100 c-img" alt="Slide 1">
-					<div class="carousel-caption top-0 mt-4">
-					  <p class="mt-5 fs-3" >Object Oriented Programming</p>
-					  <table>
-						<tr>
-						  <th>Title</th>
-						  <td>Asteriod shooter game</td>
-						</tr>
-						<tr>
-						  <th>Topics Implemented</th>
-						  <td>
-							<ul>
-							  <li>Inheritance -- Enemy classes, asteroids and bosses</li>
-							  <li>Polymorphism -- Different asteroids react different</li>
-							  <li>Encapsulation -- Hiding datas</li>
-							  <li>Abstraction -- Setrotation</li>
-							</ul>
-						  </td>
-						</tr>
-						<tr>
-						  <th>Description</th>
-						  <td>A simple asteroid shooter game developed using C++ and SFML. The Project was implemented as concept implementation of OOP. </td>
-						</tr>
-					  </table>
-					  <a href="https://github.com/sanatankafle12/OOP_PROJECT" target="_blank"><button class="btn btn-primary">view code</button></a>
-					</div>
+					<div class="carousel-item active">
+					<div class="cards-container">
+						<div class="carousel_">
+							<div class="card_">
+							  <div class="video-section" >
+								<img src="images/oop.gif" class="d-block w-100 c-img" alt="Slide 1"> 
+							  </div>
+							  <h2 class="title_">Asteroid Shooter</h2>
+							  <div class="topics">
+								<div class="topic">C++</div>
+								<div class="topic">SFML</div>
+								<div class="topic">OOP</div>
+							  </div>
+							  <p class="description_">A simple asteroid shooter game developed using C++ and SFML. The project was implemented as a concept implementation of OOP.</p>
+							  <a href="https://github.com/sanatankafle12/OOP_PROJECT" target="_blank"><button type="button" class="btn btn-outline-success">View Code</button></a>
+							</div>
+						  </div>
+						  <div class="carousel_">
+							<div class="card_">
+							  <div class="video-section" >
+								<img src="images/dsa.gif" class="d-block w-100 c-img" alt="Slide 1"> 
+							  </div>
+							  <h2 class="title_">Knights Tour</h2>
+							  <div class="topics">
+								<div class="topic">Python</div>
+								<div class="topic">Pygame</div>
+								<div class="topic">DSA</div>
+							  </div>
+							  <p class="description_">Knights tour is a famous chess problem where a knight has to move to all squares without repeating. Backtrackking was used along with a herustic known as Warnsdroff algorithm..</p>
+							  <a href="https://github.com/sanatankafle12/DSA_Project" target="_blank"><button type="button" class="btn btn-outline-success">View Code</button></a>
+							</div>
+						  </div>
+						</div>
+						</div>
+				  <div class="carousel-item">
+					<div class="cards-container">
+						<div class="carousel_">
+							<div class="card_">
+							  <div class="video-section" >
+								<img src="images/graphics.gif" class="d-block w-100 c-img" alt="Slide 1"> 
+							  </div>
+							  <h2 class="title_">Escape Room</h2>
+							  <div class="topics">
+								<div class="topic">Python</div>
+								<div class="topic">Pygames</div>
+								<div class="topic">Graphics</div>
+							  </div>
+							  <p class="description_">The escape room has been constructed on the basis of ray casting technique and the player has been made by 3D transformation.</p>
+							  <a href="https://github.com/sanatankafle12/Escape-Room-Graphics_project" target="_blank"><button type="button" class="btn btn-outline-success">View Code</button></a>
+							</div>
+						  </div>
+						  <div class="carousel_">
+							<div class="card_">
+							  <div class="video-section" >
+								<img src="images/Ai.gif" class="d-block w-100 c-img" alt="Slide 1"> 
+							  </div>
+							  <h2 class="title_">Text Summarization</h2>
+							  <div class="topics">
+								<div class="topic">NLP</div>
+								<div class="topic">TFIDF</div>
+								<div class="topic">Python</div>
+							  </div>
+							  <p class="description_">Implementation of text summarization using TFIDF, Textrank where textrank ranks depending upon matrics while TFIDF calculates the importance of the word in the sentence.</p>
+							  <a href="https://github.com/sanatankafle12/Text_Summarization" target="_blank"><button type="button" class="btn btn-outline-success">View Code</button></a>
+							</div>
+						  </div>
+						</div>
 				  </div>
-				  <div class="carousel-item c-item">
-					<img src="images/dsa.gif" class="d-block w-100 c-img" alt="Slide 2">
-					<div class="carousel-caption top-0 mt-4">
-						<p class="mt-5 fs-3 text-uppercase">Data Structure and Algorithm</p>
-						<table>
-							<tr>
-							  <th>Title</th>
-							  <td>Knights Tour and Minimum Steps</td>
-							</tr>
-							<tr>
-							  <th>Topics Implemented</th>
-							  <td>
-								<ul>
-								  <li>Stack -- To record knights move.</li>
-								  <li>Queue -- In minimum steps where each solution are stored</li>
-								  <li>BFS -- Minimum steps for knight to traverse from source to destination. </li>
-								  <li>Backtrakking -- Used to go back if game is dead</li>
-								</ul>
-							  </td>
-							</tr>
-							<tr>
-							  <th>Description</th>
-							  <td>Knights tour is a famous chess problem where a knight has to move to all squares without repeating. Backtrackking was used along with a herustic known as Warnsdroff algorithm.</td>
-							</tr>
-						  </table>
-					  <a href="https://github.com/sanatankafle12/DSA_Project" target="_blank" ><button class="btn btn-primary" id="view-code-btn" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">view code</button></a>
-					</div>
-				  </div>
-				  <div class="carousel-item c-item">
-					<img src="images/graphics.gif" class="d-block w-100 c-img" alt="Slide 2">
-					<div class="carousel-caption top-0 mt-4">
-						<p class="mt-5 fs-3 text-uppercase">Graphics<br> Project</p>
-						<table>
-						<tr>
-							<th>Title</th>
-							<td>Escape Room</td>
-						  </tr>
-						  <tr>
-							<th>Topics Implemented</th>
-							<td>
-							  <ul>
-								<li>Ray Casting - To build closure areas in the space</li>
-								<li>3D transformation - To convert 2D model to 3D</li>
-								<li>Culling - Removing parts not visible</li>
-								<li>Lighting - For shadow effect to the model</li>
-							  </ul>
-							</td>
-						  </tr>
-						  <tr>
-							<th>Description</th>
-							<td>The escape room has been constructed on the basis of ray casting technique and the player has been made by 3D transformation.</td>
-						  </tr>
-						</table>
-					  <a href="https://github.com/sanatankafle12/Escape-Room-Graphics_project" target="_blank"><button class="btn btn-primary" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">view code</button></a>
-					</div>
-				  </div>
-				  <div class="carousel-item c-item">
-					
-					<img src="images/Ai.gif" class="d-block w-100 c-img" alt="Slide 2">
-					<div class="carousel-caption top-0 mt-4">
-						<p class="mt-5 fs-3 text-uppercase">Artificial Intelligence</p>
-						<table>
-							<tr>
-								<th>Title</th>
-								<td>Extractive text summarization in nepali and english</td>
-							  </tr>
-							  <tr>
-								<th>Topics Implemented</th>
-								<td>
-								  <ul>
-									<li>Spacy - For text summarization</li>
-									<li>TFIDF - Word importance approach</li>
-									<li>Text Rank - Graph based Approach</li>
-									<li>Cosine similarity - To find similarity between words.</li>
-								  </ul>
-								</td>
-							  </tr>
-							  <tr>
-								<th>Description</th>
-								<td>Implementation of text summarization using TFIDF, Textrank where textrank ranks depending upon matrics while TFIDF calculates the importance of the word in the sentence.</td>
-							  </tr>
-						</table>
-					  <a href="https://github.com/sanatankafle12/Text_Summarization" target="_blank"><button class="btn btn-primary" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">view code</button></a>
-					</div>
-				  </div>
-				  <div class="carousel-item c-item">
-					<img src="images/mior.gif" class="d-block w-100 c-img" alt="Slide 3">
-					<div class="carousel-caption top-0 mt-4" >
-						<p class="mt-5 fs-3 text-uppercase">Minor<br> Project</p>
-						<table>
-							<tr>
-							  <th>Title</th>
-							  <td>Predicting price of used mobile phones</td>
-							</tr>
-							<tr>
-							  <th>Topics Implemented</th>
-							  <td>
-								<ul>
-									<li>Linear Regression - For valuating the price of mobile.</li>
-									<li>Classification - For Recommending Mobile phones</li>
-									<li>Web Scraping - To extract data from various sources</li>
-								</ul>
-							  </td>
-							</tr>
-							<tr>
-							  <th>Description</th>
-							  <td>Check how much your phone costs now or get recommendation of new phone you want to buy. </td>
-							</tr>
-						  </table>
-					  <a href="https://github.com/sanatankafle12/minor_project" target="_blank"><button class="btn btn-primary" data-bs-toggle="modal"
-						data-bs-target="#booking-modal">View Code</button></a>
-					</div>
+				  <div class="carousel-item">
+					<div class="cards-container">
+						<div class="carousel_">
+							<div class="card_">
+							  <div class="video-section" >
+								<img src="images/mior.gif" class="d-block w-100 c-img" alt="Slide 1"> 							  </div>
+							  <h2 class="title_">Price Prediction</h2>
+							  <div class="topics">
+								<div class="topic">ML</div>
+								<div class="topic">Python</div>
+								<div class="topic">Scraping</div>
+							  </div>
+							  <p class="description_">Check how much your phone costs now or get recommendation of new phone you want to buy.</p>
+							  <a href="https://github.com/sanatankafle12/minor_project" target="_blank"><button type="button" class="btn btn-outline-success">View Code</button></a>
+							</div>
+						  </div>
+						  <div class="carousel_">
+							<div class="card_">
+							  <div class="video-section" >
+								<img src="images/major.gif" class="d-block w-100 c-img" alt="Slide 1"> 
+							  </div>
+							  <h2 class="title_">MCQ Generator</h2>
+							  <div class="topics">
+								<div class="topic">T5</div>
+								<div class="topic">NLP</div>
+								<div class="topic">Python</div>
+							  </div>
+							  <p class="description_">Give a text, We give you notes and a simple MCQ to self assess. An Academic Project Implementation.</p>
+							  <a href="https://github.com/sanatankafle12/DSA_Project" target="_blank"><button type="button" class="btn btn-outline-success">View Code</button></a>
+							</div>
+						  </div>
+						</div>
 				  </div>
 				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				  <span class="visually-hidden">Previous</span>
 				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
 				  <span class="visually-hidden">Next</span>
 				</button>
 			  </div>
+			  
 		</div>
+
 	</div>
 
 	<div class="hobbies" id="Hobbies">
@@ -510,6 +475,7 @@
 	<button class="go-up-button" onclick="goToTop()">
 		&uarr;
 	  </button>
+	  
 </body>
 
 

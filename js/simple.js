@@ -85,3 +85,29 @@ function opentab_hobbies(tabname){
   document.getElementById(tabname).classList.add("active-tab");
 }
 
+  var i = 0;
+  var txt =
+    'Hi!! <br>' +
+    'I\'m Sanatan Kafle.<br>' +
+    'A Computer Engineer.<br>';
+  var speed = 50;
+
+  function typeWriter() {
+    if (i < txt.length) {
+      if (txt.charAt(i) === '<') {
+        // If the current character is "<", skip it to prevent HTML interpretation
+        var endIndex = txt.indexOf('>', i);
+        document.getElementById('demo').innerHTML += txt.substring(i, endIndex + 1);
+        i = endIndex + 1;
+      } else {
+        document.getElementById('demo').innerHTML += txt.charAt(i);
+        i++;
+      }
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  // Call the typeWriter function when the page loads
+  window.addEventListener('DOMContentLoaded', function () {
+    typeWriter();
+  });
