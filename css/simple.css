@@ -228,69 +228,39 @@ nav a:hover {
   .hobbies-tab-contents.active-tab{
     display: block;
   }
-
-  
-
-  .skill{
-    transform: rotate(270deg);
-    margin-left: 200px;
-    margin-top: -30px;
-    width: 250px;
+  .skill {
+    width: 70%;
+    height: 200px; /* Adjust the height as needed */
     color: #fff;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    padding: 10px;
   }
-  .skill li{
+  
+  .skill_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skill_list li {
     list-style: none;
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 10px;
+    margin-left: 10px;
   }
-
-  .skill li h3{
+  
+  .skill_list li h3 {
     font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  .skill_list li :hover{
+    box-shadow: 0 10px 18px rgba(255, 255, 255, 0.493), 0 10px 10px rgba(0,0,0,0.22);
   }
 
-  .bar{
-    background: #353b48;
-    display: block;
-    height: 15px;
-    border: 1px solid rgba(0,0,0,0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  }
 
-  .bar span{
-    height: 20px;
-    float: left;
-    background: linear-gradient(135deg,rgba(236,0,140,1)0%,rgba(252,103,103,1)100%);
-  }  
-
-  .html{
-    width: 60%;
-  }
-
-  .css{
-    width: 50%;
-  }
-  .django{
-    width: 50%;
-  }
-  .js{
-    width: 60%;
-  }
-  .excel{
-    width: 80%;
-  }
-  .r{
-    width: 75%;
-  }
-  .python{
-    width: 100%;
-  }
-  .cpp{
-    width: 60%;
-  }
-  .c{
-    width: 80%;
-  }
 
   .txt{
     font-size: 4vw;

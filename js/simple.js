@@ -111,3 +111,5 @@ function opentab_hobbies(tabname){
   window.addEventListener('DOMContentLoaded', function () {
     typeWriter();
   });
+
+  
