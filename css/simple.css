@@ -359,10 +359,9 @@ nav a:hover {
   margin: 0 auto;
 }
 .description_{
-text-align: justify;
+font-size: 1vmax;
 }
 .title_ {
-  font-size: 24px;
   font-weight: bold;
   margin-top: 20px;
 }
@@ -747,6 +746,9 @@ text-align: justify;
       height: 100px;
       width: 100px;
     }
+    .description_{
+      font-size: 15px;
+      }
     .vertical-line {
       border-left: 0px solid rgb(104, 25, 25);
     }
