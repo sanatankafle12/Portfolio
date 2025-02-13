@@ -337,7 +337,7 @@ nav a:hover {
 
   .carousel_ {
     height: 500px;
-    flex-basis: 30%;
+    width: 30%;
     background-color: rgb(0 0 0 / 0%);
     position: relative;
     margin: 5%;
