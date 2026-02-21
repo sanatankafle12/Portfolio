@@ -1104,3 +1104,42 @@ body {
     }
 }
 
+/* ==================== Certificates & Courses Section ==================== */
+.subsection-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.subsection-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.certificates-content,
+.courses-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.certificate-link {
+    margin-top: 1rem;
+}
+
+.certificate-link .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+.certificate-link i {
+    margin-right: 0.5rem;
+}
+
