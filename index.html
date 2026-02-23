@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/portfolio.css">
 </head>
-<body>
+<body class="preload">
     <!-- Animated Background -->
     <div class="background-animation">
         <div class="shape shape-1"></div>
@@ -29,8 +30,13 @@
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#hobbies" class="nav-link">Hobbies</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -498,6 +504,110 @@
         </div>
     </section>
 
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section hobbies-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Beyond Work</span>
+                <h2 class="section-title">Hobbies & Interests</h2>
+            </div>
+            
+            <!-- Hobbies Tabs -->
+            <div class="hobbies-tab-titles">
+                <button class="hobbies-tab-link active-link" onclick="openHobbyTab('writing')">
+                    <i class="fas fa-pen-fancy"></i> Writing
+                </button>
+                <button class="hobbies-tab-link" onclick="openHobbyTab('photography')">
+                    <i class="fas fa-camera"></i> Photography
+                </button>
+                <button class="hobbies-tab-link" onclick="openHobbyTab('travelling')">
+                    <i class="fas fa-plane"></i> Travelling
+                </button>
+            </div>
+
+            <!-- Writing Tab -->
+            <div class="hobbies-tab-content active-tab" id="writing">
+                <div class="writing-slider-container swiper">
+                    <div class="swiper-wrapper" id="medium-articles">
+                        <!-- Loading State -->
+                        <div class="loading-state">
+                            <div class="spinner"></div>
+                            <p>Loading articles from Medium...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <!-- Photography Tab -->
+            <div class="hobbies-tab-content" id="photography">
+                <div class="photography-container">
+                    <div id="photo-slide">
+                        <div class="photo-item" style="background-image: url(images/1.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/2.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/3.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/4.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/5.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/6.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/7.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/8.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/9.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/10.jpg);"></div>
+                        <div class="photo-item" style="background-image: url(images/11.jpg);"></div>
+                    </div>
+                    <div class="photo-buttons">
+                        <button id="photo-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button id="photo-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travelling Tab -->
+            <div class="hobbies-tab-content" id="travelling">
+                <div class="travel-grid">
+                    <div class="travel-card">
+                        <img src="images/mardi.jpg" alt="Mardi Himal">
+                        <div class="travel-overlay">
+                            <h3>Mardi Himal</h3>
+                        </div>
+                    </div>
+                    <div class="travel-card">
+                        <img src="images/dwarka.jpg" alt="Dwarka">
+                        <div class="travel-overlay">
+                            <h3>Dwarka - Arabian Sea</h3>
+                        </div>
+                    </div>
+                    <div class="travel-card">
+                        <img src="images/simla.jpg" alt="Simla">
+                        <div class="travel-overlay">
+                            <h3>Simla</h3>
+                        </div>
+                    </div>
+                    <div class="travel-card">
+                        <img src="images/bishnudwar.jpg" alt="Bishnudwar">
+                        <div class="travel-overlay">
+                            <h3>Bishnudwar</h3>
+                        </div>
+                    </div>
+                    <div class="travel-card">
+                        <img src="images/tso-rolpa.jpg" alt="Tso Rolpa">
+                        <div class="travel-overlay">
+                            <h3>Tso-Rolpa</h3>
+                        </div>
+                    </div>
+                    <div class="travel-card">
+                        <img src="images/pokhara.jpg" alt="Pokhara">
+                        <div class="travel-overlay">
+                            <h3>Pokhara</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
@@ -573,19 +683,320 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Sanatan Kafle. Designed with <i class="fas fa-heart"></i> and creativity.</p>
-        </div>
-    </footer>
-
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/portfolio.js"></script>
+    
+    <script>
+        // Hobbies Tab Functionality
+        function openHobbyTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.hobbies-tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active-tab');
+            });
+            
+            // Remove active class from all tab links
+            const tabLinks = document.querySelectorAll('.hobbies-tab-link');
+            tabLinks.forEach(link => {
+                link.classList.remove('active-link');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active-tab');
+            
+            // Add active class to clicked tab link
+            event.target.closest('.hobbies-tab-link').classList.add('active-link');
+        }
+
+        // Fetch Medium Articles
+        let swiperInstance = null;
+
+        // Fallback articles in case API fails
+        const fallbackArticles = [
+            {
+                title: "Ethical Dilemma with AI",
+                description: "The rise of AI has sparked a debate between hope and fear. Dystopian concerns include the loss of control, and challenges in incorporating morality and emotions into AI.",
+                link: "https://medium.com/@sakafle/the-ethical-dilemma-with-ai-f6e03522f7f1",
+                thumbnail: "images/ethics.jpg",
+                pubDate: "2023-05-15"
+            },
+            {
+                title: "Predicting Price using Regression",
+                description: "Selling used phones has always been tedious. Here, I explain how we created a Regression Model that can predict how much your phone can be sold for.",
+                link: "https://medium.com/@sakafle/predicting-price-of-used-phones-data-driven-approach-97f39dac2d58",
+                thumbnail: "images/d_m.jpg",
+                pubDate: "2023-04-20"
+            },
+            {
+                title: "Melodies Of Resilience",
+                description: "Music taught me to appreciate beauty inside little things. To anyone in despair, I offer this: let the melodies of resilience be your guide.",
+                link: "https://medium.com/@sakafle/melodies-of-resilience-how-music-helped-me-at-my-lowest-point-7c9e1e4ec929",
+                thumbnail: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*a01R715IOjiL5UPtSHyTAA.jpeg",
+                pubDate: "2023-03-10"
+            },
+            {
+                title: "Understanding Lyrics",
+                description: "Let me walk you through how I dwell around the lyrics of 'Mr. Tambourine Man by Bob Dylan'.",
+                link: "https://medium.com/@sakafle/breaking-down-the-most-lyrically-beautiful-song-i-know-c1f7a2a82b50",
+                thumbnail: "https://miro.medium.com/v2/resize:fit:450/format:webp/1*TbhpR3Y-PinjK2jyH0S0Wg.jpeg",
+                pubDate: "2023-02-18"
+            },
+            {
+                title: "Bojack Horseman",
+                description: "I can't deny the brilliance of the show, but I also can't ignore the potential emotional impact it may have on sensitive souls.",
+                link: "https://medium.com/@sakafle/why-i-want-everyone-to-watch-bojack-but-wouldnt-recommend-to-anyone-1ddd727b895d",
+                thumbnail: "https://miro.medium.com/v2/resize:fit:636/format:webp/1*ir_kDBCU4bcei30_feAtEg.jpeg",
+                pubDate: "2023-01-25"
+            },
+            {
+                title: "Life as a Mosaic",
+                description: "You gather pieces from everyone you meet and morph into a different character. You become everyone else but you.",
+                link: "https://medium.com/@sakafle/becoming-a-mosaic-of-life-fef0279357e8",
+                thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrARfMpFXYz0LbuzihFDBSNETNDmjai3zXhP7EtsbZQ&s",
+                pubDate: "2022-12-15"
+            },
+            {
+                title: "Mukti Bhawan",
+                description: "People wait for death in these Mukti Bhawan as a part of salvation in Varanasi. The place is a reality check indeed.",
+                link: "https://medium.com/@sakafle/preparing-for-death-a-look-inside-mukti-bhawan-aa1abd7991ec",
+                thumbnail: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*8ZVPW9uK-6aB7Z3LwLNskw.png",
+                pubDate: "2022-11-20"
+            },
+            {
+                title: "Letters To Milena",
+                description: "Kafka has beautifully portrayed the essence of love through his letters.",
+                link: "https://medium.com/@sakafle/the-timeless-beauty-of-kafkas-letters-to-milena-4b1c92f5fd3a",
+                thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYnaXUDz3nrV1jjqL5MB0tGH0ib4wzmApFBg&usqp=CAU",
+                pubDate: "2022-10-08"
+            }
+        ];
+
+        async function fetchMediumArticles() {
+            const mediumUsername = 'sakafle';
+            
+            try {
+                // Try multiple RSS to JSON services
+                let data = null;
+                
+                // Try Method 1: RSS2JSON
+                try {
+                    const response1 = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`);
+                    const result1 = await response1.json();
+                    if (result1.status === 'ok' && result1.items && result1.items.length > 0) {
+                        data = result1;
+                    }
+                } catch (e) {
+                    console.log('RSS2JSON failed, trying alternative...');
+                }
+                
+                // Try Method 2: AllOrigins as CORS proxy
+                if (!data) {
+                    try {
+                        const response2 = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://medium.com/feed/@' + mediumUsername)}`);
+                        const result2 = await response2.json();
+                        if (result2.contents) {
+                            const parser = new DOMParser();
+                            const xml = parser.parseFromString(result2.contents, 'text/xml');
+                            const items = xml.querySelectorAll('item');
+                            
+                            if (items.length > 0) {
+                                data = {
+                                    items: Array.from(items).map(item => ({
+                                        title: item.querySelector('title')?.textContent || '',
+                                        link: item.querySelector('link')?.textContent || '',
+                                        pubDate: item.querySelector('pubDate')?.textContent || '',
+                                        description: item.querySelector('description')?.textContent || '',
+                                        content: item.querySelector('content\\:encoded')?.textContent || item.querySelector('description')?.textContent || '',
+                                        thumbnail: extractImageFromXML(item)
+                                    }))
+                                };
+                            }
+                        }
+                    } catch (e) {
+                        console.log('AllOrigins failed, using fallback articles...');
+                    }
+                }
+                
+                if (data && data.items && data.items.length > 0) {
+                    displayArticles(data.items);
+                } else {
+                    displayArticles(fallbackArticles);
+                }
+            } catch (error) {
+                console.error('Error fetching Medium articles:', error);
+                displayArticles(fallbackArticles);
+            }
+        }
+
+        function extractImageFromXML(item) {
+            const content = item.querySelector('content\\:encoded')?.textContent || item.querySelector('description')?.textContent || '';
+            const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
+            return imgMatch ? imgMatch[1] : null;
+        }
+
+        function displayArticles(articles) {
+            const articlesContainer = document.getElementById('medium-articles');
+            articlesContainer.innerHTML = ''; // Clear loading state
+            
+            articles.forEach(article => {
+                // Extract first image from content or use thumbnail
+                let imageUrl = article.thumbnail || extractImageFromContent(article.content || article.description);
+                if (!imageUrl) {
+                    imageUrl = 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'; // Default Medium image
+                }
+                
+                // Clean description (remove HTML tags and limit length)
+                let description = article.description || '';
+                description = stripHtml(description);
+                if (description.length > 150) {
+                    description = description.substring(0, 150) + '...';
+                }
+                
+                // Format date
+                const date = new Date(article.pubDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+                
+                // Create article card
+                const card = document.createElement('div');
+                card.className = 'writing-card swiper-slide';
+                card.innerHTML = `
+                    <div class="writing-image-content">
+                        <div class="writing-card-image">
+                            <img src="${imageUrl}" alt="${escapeHtml(article.title)}" class="writing-card-img" onerror="this.src='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'">
+                        </div>
+                    </div>
+                    <div class="writing-card-content">
+                        <div class="article-meta">
+                            <span class="article-date"><i class="far fa-calendar"></i> ${date}</span>
+                        </div>
+                        <h3 class="writing-title">${escapeHtml(article.title)}</h3>
+                        <p class="writing-description">${escapeHtml(description)}</p>
+                        <a href="${article.link}" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-book-open"></i> Read Article
+                        </a>
+                    </div>
+                `;
+                articlesContainer.appendChild(card);
+            });
+            
+            // Initialize Swiper after articles are loaded
+            initializeSwiper();
+        }
+
+        function extractImageFromContent(content) {
+            if (!content) return null;
+            const imgRegex = /<img[^>]+src="([^">]+)"/g;
+            const match = imgRegex.exec(content);
+            return match ? match[1] : null;
+        }
+
+        function stripHtml(html) {
+            if (!html) return '';
+            const tmp = document.createElement('div');
+            tmp.innerHTML = html;
+            return tmp.textContent || tmp.innerText || '';
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function initializeSwiper() {
+            // Destroy existing instance if any
+            if (swiperInstance) {
+                swiperInstance.destroy(true, true);
+                swiperInstance = null;
+            }
+            
+            // Small delay to ensure DOM is ready
+            setTimeout(() => {
+                // Count number of slides
+                const slideCount = document.querySelectorAll('#medium-articles .swiper-slide').length;
+                console.log('Initializing Swiper with', slideCount, 'slides');
+                
+                if (slideCount === 0) {
+                    console.warn('No slides found to initialize Swiper');
+                    return;
+                }
+                
+                // Initialize new Swiper instance
+                swiperInstance = new Swiper(".writing-slider-container", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: slideCount > 2, // Only loop if we have more than 2 slides
+                    grabCursor: true,
+                    centeredSlides: false,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                        },
+                    },
+                    on: {
+                        init: function() {
+                            console.log('Swiper initialized successfully!');
+                        },
+                        slideChange: function() {
+                            console.log('Slide changed to:', this.activeIndex);
+                        }
+                    }
+                });
+            }, 200);
+        }
+
+        // Photography Slider
+        const photoSlide = document.getElementById('photo-slide');
+        const photoPrevBtn = document.getElementById('photo-prev');
+        const photoNextBtn = document.getElementById('photo-next');
+        
+        if (photoSlide && photoPrevBtn && photoNextBtn) {
+            photoPrevBtn.addEventListener('click', () => {
+                photoSlide.scrollLeft -= 400;
+            });
+            
+            photoNextBtn.addEventListener('click', () => {
+                photoSlide.scrollLeft += 400;
+            });
+        }
+
+        // Load Medium articles when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            // Check if Swiper is loaded
+            if (typeof Swiper === 'undefined') {
+                console.error('Swiper library not loaded!');
+            } else {
+                console.log('Swiper library loaded successfully');
+            }
+            fetchMediumArticles();
+        });
+    </script>
 </body>
 </html>
 

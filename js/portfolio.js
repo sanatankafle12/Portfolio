@@ -24,21 +24,64 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// ==================== Theme Toggle ====================
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to dark
+const currentTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', currentTheme);
+
+// Remove preload class after a brief delay to enable transitions
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.body.classList.remove('preload');
+    }, 100);
+});
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update navbar background based on theme and scroll position
+    updateNavbarBackground();
+});
+
+// Update navbar background based on theme
+function updateNavbarBackground() {
+    const currentScroll = window.pageYOffset;
+    const theme = html.getAttribute('data-theme');
+    
+    if (theme === 'light') {
+        if (currentScroll > 100) {
+            navbar.style.background = 'rgba(255, 235, 205, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+        } else {
+            navbar.style.background = 'rgba(255, 235, 205, 0.95)';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+        }
+    } else {
+        if (currentScroll > 100) {
+            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+        } else {
+            navbar.style.background = 'rgba(15, 23, 42, 0.8)';
+            navbar.style.boxShadow = 'none';
+        }
+    }
+}
+
 // ==================== Navbar Scroll Effect ====================
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.background = 'rgba(15, 23, 42, 0.8)';
-        navbar.style.boxShadow = 'none';
-    }
-
+    updateNavbarBackground();
     lastScroll = currentScroll;
 });
 
@@ -149,49 +192,87 @@ if (heroTitle) {
     }, 500);
 }
 
-// ==================== Cursor Trail Effect (Optional) ====================
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
+// ==================== Coder Cursor Trail Effect ====================
+// Code symbols that represent a developer
+const codeSymbols = [
+    '{', '}', '<', '>', '(', ')', '[', ']', 
+    ';', '/', '$', '#', '=', '+', '-', '*',
+    '=>', '{ }', '< />', '++', '--', '&&', '||',
+    'fn', 'if', '!=', '==', '::', '0', '1'
+];
+let lastTrailTime = 0;
+const trailDelay = 50; // milliseconds between each symbol
 
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
-
-const cursor = document.createElement('div');
-cursor.style.cssText = `
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.5), transparent);
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-    display: none;
-`;
-document.body.appendChild(cursor);
-
-// Only show cursor on desktop
+// Only show on desktop
 if (window.innerWidth > 768) {
-    cursor.style.display = 'block';
-    
-    function animate() {
-        const dx = mouseX - cursorX;
-        const dy = mouseY - cursorY;
+    document.addEventListener('mousemove', (e) => {
+        const currentTime = Date.now();
         
-        cursorX += dx * 0.1;
-        cursorY += dy * 0.1;
+        // Throttle trail creation
+        if (currentTime - lastTrailTime < trailDelay) return;
+        lastTrailTime = currentTime;
         
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
+        // Create trail element
+        const trail = document.createElement('div');
+        const symbol = codeSymbols[Math.floor(Math.random() * codeSymbols.length)];
         
-        requestAnimationFrame(animate);
-    }
-    animate();
+        trail.textContent = symbol;
+        trail.className = 'cursor-trail';
+        
+        // Get current theme color
+        const theme = document.documentElement.getAttribute('data-theme');
+        const color = theme === 'light' ? '#f97316' : '#6366f1';
+        
+        // Random size variation for more organic feel
+        const size = 14 + Math.random() * 6; // 14-20px
+        
+        trail.style.cssText = `
+            position: fixed;
+            left: ${e.clientX}px;
+            top: ${e.clientY}px;
+            color: ${color};
+            font-family: 'Courier New', monospace;
+            font-size: ${size}px;
+            font-weight: bold;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.6;
+            transform: translate(-50%, -50%);
+            animation: fadeTrail 1.2s ease-out forwards;
+        `;
+        
+        document.body.appendChild(trail);
+        
+        // Remove element after animation
+        setTimeout(() => {
+            trail.remove();
+        }, 1200);
+    });
 }
+
+// Add CSS animations for trail
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeTrail {
+        0% {
+            opacity: 0.7;
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        }
+        50% {
+            transform: translate(-50%, -60px) scale(0.8) rotate(5deg);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -80px) scale(0.3) rotate(10deg);
+        }
+    }
+    
+    .cursor-trail {
+        user-select: none;
+        text-shadow: 0 0 10px currentColor;
+    }
+`;
+document.head.appendChild(style);
 
 // ==================== Active Navigation Link on Scroll ====================
 const sections = document.querySelectorAll('section[id]');
